@@ -13,8 +13,13 @@ module TestApp
     set :views, 'app/srv/views'
 
     get '/' do
-      @opal_boot_code = Opal::Processor.load_asset_code(@sprockets, 'application')
       erb :'index.html'
+    end
+
+  private
+
+    def opal_boot_code
+      @opal_boot_code ||= Opal::Processor.load_asset_code(@sprockets, 'application')
     end
 
   end

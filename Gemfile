@@ -2,8 +2,7 @@ source 'https://rubygems.org'
 
 gem 'sinatra'
 gem 'thin'
-
-gem 'opal', :git => 'https://github.com/opal/opal.git', :branch => 'master'
-gem 'opal-jquery'
-gem 'opal-vienna'
+gem 'opal',         :github => 'opal/opal', :branch => 'master'
+gem 'opal-browser', :github => 'opal/opal-browser'
+gem 'opal-vienna',  :github => 'bebac/vienna', :branch => 'opal-browser'
 gem 'sass'

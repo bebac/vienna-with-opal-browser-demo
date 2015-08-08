@@ -1,6 +1,24 @@
 GIT
-  remote: https://github.com/opal/opal.git
-  revision: 247d921f43e2fcdec47405c1c2a38472fc89ca71
+  remote: git://github.com/bebac/vienna.git
+  revision: 605fcc5566f6e81f44a153aad4d1a5f0fa769f14
+  branch: opal-browser
+  specs:
+    opal-vienna (0.7.0)
+      opal (>= 0.5.0, < 1.0.0)
+      opal-activesupport
+      opal-browser
+
+GIT
+  remote: git://github.com/opal/opal-browser.git
+  revision: d53cd7212853079ca81a108e402cd8722f4b4df4
+  specs:
+    opal-browser (0.2.0)
+      opal
+      paggio
+
+GIT
+  remote: git://github.com/opal/opal.git
+  revision: 22c3d08412e80d0cf565bc5565e40f88a07c7a89
   branch: master
   specs:
     opal (0.9.0.dev)
@@ -17,12 +35,7 @@ GEM
     hike (1.2.3)
     opal-activesupport (0.1.0)
       opal (>= 0.5.0, < 1.0.0)
-    opal-jquery (0.4.0)
-      opal (>= 0.7.0, < 0.9.0)
-    opal-vienna (0.7.0)
-      opal (>= 0.5.0, < 1.0.0)
-      opal-activesupport
-      opal-jquery
+    paggio (0.2.4)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -45,8 +58,8 @@ PLATFORMS
 
 DEPENDENCIES
   opal!
-  opal-jquery
-  opal-vienna
+  opal-browser!
+  opal-vienna!
   sass
   sinatra
   thin
